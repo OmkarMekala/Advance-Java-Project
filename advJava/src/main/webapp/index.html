@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	<h1> registration form</h1>
+		<form Name="registration"  method="post" onsubmit=" return verify()" action="register1">
+		<label for="firstname"> firstname: </label>
+			<input type="text" name="firstname" id="firstname" placeholder="FIRST NAME">
+			<p id ="fnerror"></p>
+			<br>
+			<label for="lasttname"> lastname: </label>
+			<input type ="text" name="lastname" id="lastname" placeholder="LAST NAME">
+			<p id ="fnerror"></p>
+			<br>
+		    <label for="password"> password: </label>
+			<input type="password" name ="password"id="password" placeholder="PASSWORD">
+			<p id ="fnerror"></p>
+			<br>
+	       <label for="repassword"> repassword: </label>
+			<input type="repassword" name ="repassword"id="repassword" placeholder="REsPASSWORD">
+		   <p id ="fnerror"></p>
+			
+			
+			<button type ="submit"> SUBMIT</button>
+		</form>
+		<script>
+		function verify(){
+			let firstname=document.getElementById("firstname").value
+			let lastname=document.getElementById("lastname").value
+			let password=document.getElementById("password").value
+			if(firstname==""){
+				document.getElementById("fnerror").innerHTML="firstname is mandatory"
+					document.getElementById("fnerror").style.color="red"
+					return false;
+			}
+			else if(lastname==""){
+					document.getElementById("fnerror").innerHTML="lastname is mandatory"
+						document.getElementById("fnerror").style.color="red"
+						return false;
+					}
+				else if( password==""&&repassword==""){
+				
+						document.getElementById("fnerror").innerHTML="password and repassword is mandatory"
+				document.getElementById("fnerror").style.color="red"
+				return false;
+						}
+				
+				 else{
+				return true;
+				}
+			}
+			
+		</script>
+	</body>
+</html>
