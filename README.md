@@ -19,4 +19,4 @@ A web-based application built using **Core Java, JDBC, MySQL, and HTML**. This p
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Advance-Java-Project.git
+   git clone https://github.com/OmkarMekala/Advance-Java-Project.git
